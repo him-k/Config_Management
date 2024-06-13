@@ -30,7 +30,7 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
     }<br>
   }<br>
   200	OK: Successful Response<br>
-  400 Bad Request: If there are validation errors in the request body.<br>
+  400 Bad Request: If configuration already exists.<br>
 
 * GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.<br>
   Response<br>
