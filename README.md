@@ -10,75 +10,75 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 * Pydantic
 
 **API Description**
-* POST /create_configuration/  - Create a new configuration for a country with specified requirements.
-  Request:
-  {
-  "country_code": "RUS",
-  "configuration": {
-      "business_name": "Russia Business Name",
-      "P": "ABCDE12",
-      "G": "22AAAAA"
-}
+* POST /create_configuration/  - Create a new configuration for a country with specified requirements.<br>
+  Request:<br>
+  {<br>
+  "country_code": "RUS",<br>
+  "configuration": {<br>
+      "business_name": "Russia Business Name",<br>
+      "P": "ABCDE12",<br>
+      "G": "22AAAAA"<br>
+}<br>
 
-Response body:
-{
-  "country_code": "RUS",
-  "configuration": {
-    "business_name": "Russia Business Name",
-    "P": "ABCDE12",
-    "G": "22AAAAA"
+Response body:<br>
+{<br>
+  "country_code": "RUS",<br>
+  "configuration": {<br>
+    "business_name": "Russia Business Name",<br>
+    "P": "ABCDE12",<br>
+    "G": "22AAAAA"<br>
   }
 }
-200	OK: Successful Response
-400 Bad Request: If there are validation errors in the request body.
+200	OK: Successful Response<br>
+400 Bad Request: If there are validation errors in the request body.<br>
 
-* GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.
-  Response
+* GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.<br>
+  Response<br>
 {
-  "country_code": "IN",
-  "configuration": {
-    "business_name": "My Business Name",
-    "PAN": "ABCDE1234F",
-    "GSTIN": "22AAAAA0000A1Z5"
-  }
-}
-200 OK: Successful response.
-404 Not Found: If the specified country_code does not exist.
-{
-  "detail": "Configuration not found"
-}
+  "country_code": "IN",<br>
+  "configuration": {<br>
+    "business_name": "My Business Name",<br>
+    "PAN": "ABCDE1234F",<br>
+    "GSTIN": "22AAAAA0000A1Z5"<br>
+  }<br>
+}<br>
+200 OK: Successful response.<br>
+404 Not Found: If the specified country_code does not exist.<br>
+{<br>
+  "detail": "Configuration not found"<br>
+}<br>
 
-*POST /update_configuration/- Update the configuration requirements for a specific country.
- Request:
- {
-  "country_code": "IN",
-  "configuration": {
-    "business_name": "Updated Business Name",
-    "PAN": "ABCDE5678G",
-    "GSTIN": "22AAAAA0000A1Z6"
-  }
-}
-Response
-{
-  "country_code": "IN",
-  "configuration": {
-    "business_name": "Updated Business Name",
-    "PAN": "ABCDE5678G",
-    "GSTIN": "22AAAAA0000A1Z6"
-  }
-}
-200 OK: Successful Response
-404 Not Found: If the specified country_code does not exist- Configuration does not exist
+*POST /update_configuration/- Update the configuration requirements for a specific country.<br>
+ Request:<br>
+ {<br>
+  "country_code": "IN",<br>
+  "configuration": {<br>
+    "business_name": "Updated Business Name",<br>
+    "PAN": "ABCDE5678G",<br>
+    "GSTIN": "22AAAAA0000A1Z6"<br>
+  }<br>
+}<br>
+Response<br>
+{<br>
+  "country_code": "IN",<br>
+  "configuration": {<br>
+    "business_name": "Updated Business Name",<br>
+    "PAN": "ABCDE5678G",<br>
+    "GSTIN": "22AAAAA0000A1Z6"<br>
+  }<br>
+}<br>
+200 OK: Successful Response<br>
+404 Not Found: If the specified country_code does not exist- Configuration does not exist<br>
 
 
-* DELETE /delete_configuration/
-  Request:
-  In parameters, give the country code
+* DELETE /delete_configuration/<br>
+  Request:<br>
+  In parameters, give the country code<br>
   
-  Response
-    true
-  200 OK: Configuration successfully deleted.
-  404 : Configuration not found, if configuration does not exist
+  Response<br>
+    true<br>
+  200 OK: Configuration successfully deleted.<br>
+  404 : Configuration not found, if configuration does not exist<br>
   
   
 
