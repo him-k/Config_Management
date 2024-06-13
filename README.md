@@ -13,8 +13,8 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 * POST /create_configuration/  - Create a new configuration for a country with specified requirements.<br>
   Request:<br>
   {<br>
-  &ensp"country_code": "RUS",<br>
-  "configuration": {<br>
+      "country_code": "RUS",<br>
+      "configuration": {<br>
       "business_name": "Russia Business Name",<br>
       "P": "ABCDE12",<br>
       "G": "22AAAAA"<br>
