@@ -18,19 +18,19 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
       "business_name": "Russia Business Name",<br>
       "P": "ABCDE12",<br>
       "G": "22AAAAA"<br>
-}<br>
+ }<br>
 
-Response body:<br>
-{<br>
-  "country_code": "RUS",<br>
-  "configuration": {<br>
-    "business_name": "Russia Business Name",<br>
-    "P": "ABCDE12",<br>
-    "G": "22AAAAA"<br>
+  Response body:<br>
+  {<br>
+    "country_code": "RUS",<br>
+    "configuration": {<br>
+      "business_name": "Russia Business Name",<br>
+      "P": "ABCDE12",<br>
+      "G": "22AAAAA"<br>
+    }
   }
-}
-200	OK: Successful Response<br>
-400 Bad Request: If there are validation errors in the request body.<br>
+  200	OK: Successful Response<br>
+  400 Bad Request: If there are validation errors in the request body.<br>
 
 * GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.<br>
   Response<br>
@@ -48,27 +48,27 @@ Response body:<br>
   "detail": "Configuration not found"<br>
 }<br>
 
-*POST /update_configuration/- Update the configuration requirements for a specific country.<br>
- Request:<br>
+* POST /update_configuration/- Update the configuration requirements for a specific country.<br>
+  Request:<br>
+  {<br>
+  "country_code": "IN",<br>
+  "configuration": {<br>
+    "business_name": "Updated Business Name",<br>
+    "PAN": "ABCDE5678G",<br>
+    "GSTIN": "22AAAAA0000A1Z6"<br>
+   }<br>
+ }<br>
+ Response<br>
  {<br>
   "country_code": "IN",<br>
   "configuration": {<br>
     "business_name": "Updated Business Name",<br>
     "PAN": "ABCDE5678G",<br>
     "GSTIN": "22AAAAA0000A1Z6"<br>
-  }<br>
-}<br>
-Response<br>
-{<br>
-  "country_code": "IN",<br>
-  "configuration": {<br>
-    "business_name": "Updated Business Name",<br>
-    "PAN": "ABCDE5678G",<br>
-    "GSTIN": "22AAAAA0000A1Z6"<br>
-  }<br>
-}<br>
-200 OK: Successful Response<br>
-404 Not Found: If the specified country_code does not exist- Configuration does not exist<br>
+   }<br>
+ }<br>
+ 200 OK: Successful Response<br>
+ 404 Not Found: If the specified country_code does not exist- Configuration does not exist<br>
 
 
 * DELETE /delete_configuration/<br>
