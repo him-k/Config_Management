@@ -6,6 +6,8 @@ from database import SessionLocal, engine
 app = FastAPI()
 
 models.Base.metadata.create_all(bind=engine)
+
+#connection to the database
 def get_db():
        db = SessionLocal()
        try:
@@ -13,6 +15,8 @@ def get_db():
        finally:
            db.close()
 
+
+#defining the API endpoints and calling functions in crud.py to perform database crud operations
 
 @app.post("/create_configuration/", response_model=schemas.CountryConfigurationCreate)
 def create_configuration(config: schemas.CountryConfigurationCreate, db: Session = Depends(get_db)):
