@@ -13,20 +13,20 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 * POST /create_configuration/  - Create a new configuration for a country with specified requirements.<br>
   Request:<br />
   {<br />
-     $~$"country_code": "RUS",<br>
-     "configuration": {<br>
-      "business_name": "Russia Business Name",<br>
-      "P": "ABCDE12",<br>
-      "G": "22AAAAA"<br>
+     $~$$~$"country_code": "RUS",<br>
+     $~$$~$"configuration": {<br>
+      $~$$~$$~$"business_name": "Russia Business Name",<br>
+      $~$$~$$~$"P": "ABCDE12",<br>
+      $~$$~$$~$"G": "22AAAAA"<br>
  }<br>
 
   Response body:<br>
   {<br>
-    "country_code": "RUS",<br>
-    "configuration": {<br>
-      "business_name": "Russia Business Name",<br>
-      "P": "ABCDE12",<br>
-      "G": "22AAAAA"<br>
+   $~$$~$ "country_code": "RUS",<br>
+    $~$$~$"configuration": {<br>
+     $~$$~$$~$ "business_name": "Russia Business Name",<br>
+     $~$$~$$~$ "P": "ABCDE12",<br>
+      $~$$~$$~$"G": "22AAAAA"<br>
     }<br>
   }<br>
   200	OK: Successful Response<br>
@@ -35,11 +35,11 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 * GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.<br>
   Response<br>
   {<br>
-  "country_code": "IN",<br>
-  "configuration": {<br>
-    "business_name": "My Business Name",<br>
-    "PAN": "ABCDE1234F",<br>
-    "GSTIN": "22AAAAA0000A1Z5"<br>
+  $~$$~$"country_code": "IN",<br>
+  $~$$~$"configuration": {<br>
+   $~$$~$$~$ "business_name": "My Business Name",<br>
+    $~$$~$$~$"P": "ABCDE1234F",<br>
+    $~$$~$$~$"G": "22AAAAA0000A1Z5"<br>
   }<br>
 }<br>
 200 OK: Successful response.<br>
@@ -51,20 +51,20 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 * POST /update_configuration/- Update the configuration requirements for a specific country.<br>
   Request:<br>
   {<br>
-  "country_code": "IN",<br>
-  "configuration": {<br>
-    "business_name": "Updated Business Name",<br>
-    "PAN": "ABCDE5678G",<br>
-    "GSTIN": "22AAAAA0000A1Z6"<br>
+  $~$$~$"country_code": "IN",<br>
+  $~$$~$"configuration": {<br>
+   $~$$~$$~$ "business_name": "Updated Business Name",<br>
+   $~$$~$$~$ "P": "ABCDE5678G",<br>
+   $~$$~$$~$ "G": "22AAAAA0000A1Z6"<br>
    }<br>
  }<br>
  Response<br>
  {<br>
-  "country_code": "IN",<br>
-  "configuration": {<br>
-    "business_name": "Updated Business Name",<br>
-    "PAN": "ABCDE5678G",<br>
-    "GSTIN": "22AAAAA0000A1Z6"<br>
+  $~$$~$"country_code": "IN",<br>
+  $~$$~$"configuration": {<br>
+   $~$$~$$~$ "business_name": "Updated Business Name",<br>
+   $~$$~$$~$ "P": "ABCDE5678G",<br>
+   $~$$~$$~$ "G": "22AAAAA0000A1Z6"<br>
    }<br>
  }<br>
  200 OK: Successful Response<br>
@@ -76,7 +76,7 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
   In parameters, give the country code<br>
   
   Response<br>
-    true<br>
+   $~$$~$ true<br>
   200 OK: Configuration successfully deleted.<br>
   404 : Configuration not found, if configuration does not exist<br>
   
