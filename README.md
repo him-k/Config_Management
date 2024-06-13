@@ -34,7 +34,7 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 
 * GET /get_configuration/{country_code}-Retrieve the configuration requirements for a specific country.<br>
   Response<br>
-{
+  {<br>
   "country_code": "IN",<br>
   "configuration": {<br>
     "business_name": "My Business Name",<br>
