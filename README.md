@@ -11,10 +11,10 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
 
 **API Description**
 * POST /create_configuration/  - Create a new configuration for a country with specified requirements.<br>
-  Request:<br>
-  {<br>
-      "country_code": "RUS",<br>
-      "configuration": {<br>
+  Request:<br />
+  {<br />
+     "country_code": "RUS",<br>
+     "configuration": {<br>
       "business_name": "Russia Business Name",<br>
       "P": "ABCDE12",<br>
       "G": "22AAAAA"<br>
@@ -27,8 +27,8 @@ CRUD (Create, Read, Update, Delete) operations for managing configurations.
       "business_name": "Russia Business Name",<br>
       "P": "ABCDE12",<br>
       "G": "22AAAAA"<br>
-    }
-  }
+    }<br>
+  }<br>
   200	OK: Successful Response<br>
   400 Bad Request: If there are validation errors in the request body.<br>
 
