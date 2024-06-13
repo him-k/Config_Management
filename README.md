@@ -1,6 +1,6 @@
                               A FastAPI application to manage a Configuration Management system for onboarding Organisations from each country.
 
-**Key Features:**
+**Key Features:**<br>
 CRUD (Create, Read, Update, Delete) operations for managing configurations.
 
 **Build With:**
